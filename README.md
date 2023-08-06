@@ -1,8 +1,18 @@
 # Spring boot demo
 
-## API DOC
+## API DOC - Swagger 
 
-### Books
+Go to:
+`http://<host>:<port>/api-docs`
+
+Example: http://localhost:8081/api-docs
+
+Go to:
+`http://<host>:<port>/swagger-ui/index.html`
+
+Example: http://localhost:8081/swagger-ui/index.html
+
+### Books - deprecated
 
 Request:
 

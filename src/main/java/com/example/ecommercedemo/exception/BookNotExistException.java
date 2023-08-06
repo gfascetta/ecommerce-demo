@@ -1,13 +1,17 @@
 package com.example.ecommercedemo.exception;
 
 import lombok.Getter;
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.ResponseStatus;
+import lombok.Setter;
 
-@ResponseStatus(value= HttpStatus.NOT_FOUND, reason="Book not exist")
-public class BookNotExistException extends Exception {
-    @Getter private Long bookId;
+public class BookNotExistException extends RuntimeException {
+    @Getter @Setter
+    private Long bookId;
     public BookNotExistException(Long bookId) {
         this.bookId = bookId;
+    }
+
+    @Override
+    public String getMessage() {
+        return "Book with id "+bookId+ " not exist";
     }
 }
